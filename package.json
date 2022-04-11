@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && yarn clean-build",
+    "clean-build": "rm -rf dist && mkdir dist &&  cp -r build/static/js/*.js dist/explorer.production.min.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
