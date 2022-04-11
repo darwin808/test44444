@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+<img src="https://brand.zesty.io/zesty-io-logo.svg" alt="zesty logo" width="200">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Zesty.io Explorer
 
-## Available Scripts
+Website/App Overlay Guide for Editing Zesty.io Content
 
-In the project directory, you can run:
+## Overview
 
-### `yarn start`
+Is that the explorer will be a website overlay tool that will guide the user around the data that loads on the page relative to the zesty content management system. The tool will have tabs for searchable on page data, full site navigation, inline editing, website and page health, metadata explorer, image optimization scanning, broken link scanning.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to Implement
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The tool should be built in compiled JavaScript and execute in plain JavaScript so it can run over any installation of zesty, whether it's parsley templating, next js, nuxt, or any custom build.
 
-### `yarn test`
+## Distribution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It should be distributed over npm package manager and yarn, it should also be able to be manually installed from a CDN link.
 
-### `yarn build`
+Using NPM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm install @zesty-io/explorer`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Using CDN
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- copy the script tag below and paste it in the head of your main.html file
 
-### `yarn eject`
+```
+   <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/zesty-io/explorer@cdn/build/static/js/main.min.js"
+      defer="defer"
+   ></script>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Importing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+import {ZestyExplorer} from   '@zesty-io/explorer';
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Explorer Sections
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Page Data Explorer
+- Full Site Navigation and Explorer
+- Inline Editing (phases)
+- Website and Page Health
+- Metadata
+- Link Scanning
+- Optimization Scanning
 
-## Learn More
+## Publishing to NPM
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Developer must have access to `zestyionpm` account
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm publish --access public`
